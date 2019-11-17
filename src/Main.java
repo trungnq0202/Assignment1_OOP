@@ -10,7 +10,7 @@
   Acknowledgement:  - Lecturer's slides,
                     - List interface: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html
                     - fullname, email regex pattern: https://www.regextester.com/
-                    - try, catch: next few weeks lecturer's slides
+                    - try, catch: Week 9 lecturer's slides
 
 */
 
@@ -52,7 +52,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         //Create a contacts list object
-        ContactList contactList = new ContactList( new ArrayList<Contact>() );
+        ContactList contactList = new ContactList(new ArrayList<>() );
 
         while (true){
             printMainMenu();
