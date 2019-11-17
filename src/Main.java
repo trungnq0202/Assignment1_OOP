@@ -253,7 +253,13 @@ public class Main {
         }
         System.out.println("---------------------- Edit Contact ----------------------");
         System.out.print("Please input the index of contact you want to edit: ");
-        int index = scanner.nextInt(); scanner.nextLine(); // Get the contact user want to edit by index
+        int index;
+        try {
+             index = Integer.parseInt(scanner.nextLine()); // Get the contact user want to edit by index
+        }catch (NumberFormatException e){ //catch wrong integer format exception
+            printErrorMessage(Error.INVALID_CONTACT_INDEX);
+            return;
+        }
         if (!checkValidContactIndex(contactList, index)){ // Validate the input index
             printErrorMessage(Error.INVALID_CONTACT_INDEX); //print invalid input index error to console
             return;
@@ -274,7 +280,13 @@ public class Main {
         }
         System.out.println("---------------------- Delete Contact ----------------------");
         System.out.print("Please input the index of contact you want to delete: ");
-        int index = scanner.nextInt(); // Get the contact user want to delete by index
+        int index;
+        try {
+            index = Integer.parseInt(scanner.nextLine()); // Get the contact user want to delete by index
+        }catch (NumberFormatException e){ //catch wrong integer format exception
+            printErrorMessage(Error.INVALID_CONTACT_INDEX);
+            return;
+        }
         if (!checkValidContactIndex(contactList, index)){  // Validate the input index
             printErrorMessage(Error.INVALID_CONTACT_INDEX); //print invalid input index error to console
             return;
@@ -291,6 +303,7 @@ public class Main {
         String choice = scanner.nextLine(); //get user's chosen option
         if (!checkValidInput(choice, VALIDSEARCHCHOICES)){ //validate user's input option (1 - 4)
             printErrorMessage(Error.INVALID_SORT_CHOICE); //print invalid user's input option to console
+            return;
         }
         System.out.println("---------------------- Found Contacts ----------------------");
         switch (choice){
