@@ -386,6 +386,7 @@ public class Main {
 
     //function for getting input field
     private static Contact getContactFieldInput(Scanner scanner){
+        //get each input field and validate before creating a contact object
         String fullName = getAndValidateInputField("full name", FULLNAME_PATTERN, Error.INVALID_FULLNAME_FORMAT, scanner);
         String phoneNumber = getAndValidateInputField("phone number", PHONENUMBER_PATTERN, Error.INVALID_PHONENUMBER_FORMAT, scanner);
         String email = getAndValidateInputField("email", EMAIL_PATTERN, Error.INVALID_EMAIL_FORMAT, scanner);
