@@ -26,7 +26,7 @@ This software allows you to manage contact records which includes 4 fields (full
 * Press **Shift + F10** or go to **Run** tools and hit **Run  'Main'**.
 
 ## Known bugs
-All input exceptions have been handled by printing error message to the console during running the software.
+All exceptions have been handled by printing error message to the console during running the software.
 
 ## Acknowledgement
 * Mr Quang's lecturer slides.
